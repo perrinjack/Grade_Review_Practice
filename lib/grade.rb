@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
 def grade(string)
-  "#{string}: 1"
+  array = string.split(',')
+  hash = array.group_by { |num| num }
+  hash.map { |k, v| "#{k}: #{v.count}" }.join
 end
