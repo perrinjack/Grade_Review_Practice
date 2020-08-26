@@ -13,4 +13,8 @@ RSpec.describe '#grade' do
   it 'returns Red: 1 Green: 2 for Red Green Green input' do
     expect(grade('Red, Green, Green')).to eq 'Red: 1 Green: 2'
   end
+
+  it 'raises an error when no grades are supplied' do
+    expect{grade('')}.to raise_error 'Please supply some grades'
+  end
 end
