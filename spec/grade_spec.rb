@@ -9,4 +9,8 @@ RSpec.describe '#grade' do
   it 'returns Red : 1 for Green input' do
     expect(grade('Red')).to eq 'Red: 1'
   end
+
+  it 'returns Red: 1 Green: 2 for Red Green Green input' do
+    expect(grade('Red, Green, Green')).to eq 'Red: 1 Green: 2'
+  end
 end
